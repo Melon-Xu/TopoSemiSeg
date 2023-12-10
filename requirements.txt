@@ -1,0 +1,11 @@
+torch==2.0.1
+torchvision==0.15.2
+ripser==0.6.4
+crisper==0.0.1
+gudhi==3.8.0
+SimpleITK==2.2.1
+tqdm==4.64.0
+numpy==1.22.4
+matplotlib==3.5.1
+PyYAML==6.0
+
