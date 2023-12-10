@@ -21,32 +21,30 @@ pip install -r requirements.txt
 
 ## Usage
 This loss can be incorporated into any teacher-student framework or its variants.
+Sample usage. Note that we calculate the topological consistency loss between the foreground of the likelihood map.
 
-  """
-  Sample usage. Note that we calculate the topological consistency loss between the foreground of the likelihood map.
+'''python
+def calculate_topo_loss(likelihood, target):
+  batch_size = likelihood.shape[0]
   
-  def calculate_topo_loss(likelihood, target):
-    batch_size = likelihood.shape[0]
-
-    topo_loss = 0.0
-
-    for i in range(batch_size):
-        lh = likelihood[i]
-        #print(lh.shape)
-        gt = target[i]
-
-        topo_loss += getTopoLoss(lh, gt)
-    
-    topo_loss /= batch_size
-    return topo_loss
+  topo_loss = 0.0
   
-  topo_loss_weight = 0.002
-  stu_likelihood = torch.softmax(model(unlabeled_data))[:,1,:,:]
-  tea_likelihood = torch.softmax(teacher_model(unlabeled_data))[:,1,:,:]
+  for i in range(batch_size):
+      lh = likelihood[i]
+      #print(lh.shape)
+      gt = target[i]
 
-  topo_consistency_loss = calculate_topo_loss(stu_likelihood, tea_likelihood)
-  topo_consistency_loss = topo_loss_weight*topo_consistency_loss
-  """
+      topo_loss += getTopoLoss(lh, gt)
+  
+  topo_loss /= batch_size
+  return topo_loss
+
+topo_loss_weight = 0.002
+stu_likelihood = torch.softmax(model(unlabeled_data))[:,1,:,:]
+tea_likelihood = torch.softmax(teacher_model(unlabeled_data))[:,1,:,:]
+
+topo_consistency_loss = calculate_topo_loss(stu_likelihood, tea_likelihood)
+topo_consistency_loss = topo_loss_weight*topo_consistency_loss
   
   
 
