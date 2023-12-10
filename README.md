@@ -1,9 +1,9 @@
 # [TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images](https://arxiv.org/abs/2311.16447)
-The official implementation of "TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images". Code will be coming soon.
+The official implementation of "TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images".
 
 ## Environment
 Training and evaluation environment: Python 3.9.12, PyTorch 2.0.1, CUDA 11.7.
-We use CUbicalRipser (cripser) to extract topological features.
+We use CubicalRipser (cripser) to extract topological features.
 Run the following command to install required packages.
 ```
 pip install -r requirements.txt
