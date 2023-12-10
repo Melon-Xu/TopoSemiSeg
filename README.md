@@ -21,9 +21,11 @@ pip install -r requirements.txt
 
 ## Usage
 This loss can be incorporated into any teacher-student framework or its variants.
+
   """
   Sample usage. Note that we calculate the topological consistency loss between the foreground of the likelihood map.
   """
+  
   def calculate_topo_loss(likelihood, target):
     batch_size = likelihood.shape[0]
 
