@@ -45,7 +45,7 @@ tea_likelihood = torch.softmax(teacher_model(unlabeled_data))[:,1,:,:]
 
 topo_consistency_loss = calculate_topo_loss(stu_likelihood, tea_likelihood)
 topo_consistency_loss = topo_loss_weight*topo_consistency_loss
-  
+```
   
 
 ## Qualitative Results
