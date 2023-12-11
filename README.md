@@ -56,10 +56,17 @@ topo_consistency_loss = topo_loss_weight*topo_consistency_loss
 
 ## Citation
 ```bibtex
-@InProceedings{xu2023toposemiseg,
-    author    = {Xu, Meilong and Hu, Xiaoling and Gupta, Saumya and Abousamra, Shahira and Chen, Chao},
-    title     = {TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images},
-    journal   = {arXiv},
-    year      = {2023},
-    volume    = {abs/2311.16447},
+@article{xu2023toposemiseg,
+  title={TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images},
+  author={Xu, Meilong and Hu, Xiaoling and Gupta, Saumya and Abousamra, Shahira and Chen, Chao},
+  journal={arXiv preprint arXiv:2311.16447},
+  year={2023}
+}
+
+@article{hu2019topology,
+  title={Topology-preserving deep image segmentation},
+  author={Hu, Xiaoling and Li, Fuxin and Samaras, Dimitris and Chen, Chao},
+  journal={Advances in neural information processing systems},
+  volume={32},
+  year={2019}
 }
