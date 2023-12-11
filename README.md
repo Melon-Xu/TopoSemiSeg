@@ -63,10 +63,10 @@ topo_consistency_loss = topo_loss_weight*topo_consistency_loss
   year={2023}
 }
 
-@article{hu2019topology,
+@inproceedings{hu2019topology,
   title={Topology-preserving deep image segmentation},
   author={Hu, Xiaoling and Li, Fuxin and Samaras, Dimitris and Chen, Chao},
-  journal={Advances in neural information processing systems},
+  booktitle={NeurIPS},
   volume={32},
   year={2019}
 }
