@@ -81,10 +81,7 @@ def compute_dgm_force(stu_lh_dgm, tea_lh_dgm):
     return idx_holes_to_remove, off_diagonal_match
 
 
-def getTopoLoss(stu_tensor, tea_tensor, topo_size=100, loss_mode="mse"):
-
-    stu_pd_threshold = 0.7
-    tea_pd_threshold = 0.7
+def getTopoLoss(stu_tensor, tea_tensor, topo_size=100, pd_threshold=0.7, loss_mode="mse"):
 
     if stu_tensor.ndim != 2:
         print("incorrct dimension")
@@ -110,8 +107,8 @@ def getTopoLoss(stu_tensor, tea_tensor, topo_size=100, loss_mode="mse"):
             if(np.min(gt_patch) == 1 or np.max(gt_patch) == 0): continue
             
             # Get the critical points of predictions and ground truth
-            pd_lh, bcp_lh, dcp_lh, pairs_lh_pa, valid_idx_lh, noisy_idx_lh = getCriticalPoints_cr(lh_patch, threshold=stu_pd_threshold)
-            pd_gt, bcp_gt, dcp_gt, pairs_lh_gt, valid_idx_gt, noisy_idx_gt = getCriticalPoints_cr(gt_patch, threshold=tea_pd_threshold)
+            pd_lh, bcp_lh, dcp_lh, pairs_lh_pa, valid_idx_lh, noisy_idx_lh = getCriticalPoints_cr(lh_patch, threshold=pd_threshold)
+            pd_gt, bcp_gt, dcp_gt, pairs_lh_gt, valid_idx_gt, noisy_idx_gt = getCriticalPoints_cr(gt_patch, threshold=pd_threshold)
 
             # select pd with high threshold to match
             pd_lh_for_matching = pd_lh[valid_idx_lh]
