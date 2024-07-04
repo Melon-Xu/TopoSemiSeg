@@ -1,5 +1,6 @@
-# [TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images](https://arxiv.org/abs/2311.16447)
-The official implementation of "TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images".
+# Topo-Consistency
+This repository contains the implementation for our work "[Semi-supervised Segmentation of Histopathology
+Images with Noise-Aware Topological Consistency](https://arxiv.org/pdf/2311.16447)", **accepted by ECCV 2024.**
 
 ## Environment
 Training and evaluation environment: Python 3.9.12, PyTorch 2.0.1, CUDA 11.7.
@@ -55,12 +56,13 @@ topo_consistency_loss = topo_loss_weight*topo_consistency_loss
 </p>
 
 ## Citation
+If you found this work useful, please consider citing the following articles
 ```bibtex
 @article{xu2023toposemiseg,
   title={TopoSemiSeg: Enforcing Topological Consistency for Semi-Supervised Segmentation of Histopathology Images},
   author={Xu, Meilong and Hu, Xiaoling and Gupta, Saumya and Abousamra, Shahira and Chen, Chao},
-  journal={arXiv preprint arXiv:2311.16447},
-  year={2023}
+  booktitle={ECCV}
+  year={2024}
 }
 
 @inproceedings{hu2019topology,
