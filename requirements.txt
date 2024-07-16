@@ -1,7 +1,7 @@
 torch==2.0.1
 torchvision==0.15.2
 ripser==0.6.4
-crisper==0.0.1
+cripser==0.0.1
 gudhi==3.8.0
 SimpleITK==2.2.1
 tqdm==4.64.0
